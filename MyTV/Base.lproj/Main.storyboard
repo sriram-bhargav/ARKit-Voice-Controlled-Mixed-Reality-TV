@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="MyTV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XUt-yO-3Q0">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BL4-4d-Pu4">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lDP-6d-2GU">
+                                        <rect key="frame" x="0.0" y="0.0" width="333.5" height="375"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6gm-ta-cXG">
+                                        <rect key="frame" x="333.5" y="0.0" width="333.5" height="375"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="6gm-ta-cXG" firstAttribute="width" secondItem="lDP-6d-2GU" secondAttribute="width" id="Uwm-vV-4hQ"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1h6-6L-xf4">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                <subviews>
+                                    <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3eV-0J-RcP">
+                                        <rect key="frame" x="0.0" y="0.0" width="333.5" height="375"/>
+                                    </arscnView>
+                                    <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xdc-dz-jBj">
+                                        <rect key="frame" x="333.5" y="0.0" width="333.5" height="375"/>
+                                    </arscnView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="xdc-dz-jBj" firstAttribute="width" secondItem="3eV-0J-RcP" secondAttribute="width" id="AHp-fj-ikz"/>
+                                </constraints>
+                            </stackView>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="juS-N8-uu4">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                            </arscnView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="headTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="99F-eA-OHA">
+                                <rect key="frame" x="16" y="279" width="631" height="64"/>
+                                <attributedString key="attributedText"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5bU-Eq-JVU">
+                                <rect key="frame" x="16" y="279" width="64" height="64"/>
+                                <state key="normal" image="microphone_off"/>
+                                <connections>
+                                    <action selector="microphone:" destination="BV1-FR-VrT" eventType="touchUpInside" id="R5U-Zr-gEk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qXs-wm-tOq">
+                                <rect key="frame" x="605" y="20" width="42" height="42"/>
+                                <state key="normal" image="cardboard"/>
+                                <connections>
+                                    <action selector="switchCardboardView:" destination="BV1-FR-VrT" eventType="touchUpInside" id="9rx-E8-zTL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qXs-wm-tOq" firstAttribute="top" secondItem="XUt-yO-3Q0" secondAttribute="top" constant="20" symbolic="YES" id="3Mx-sC-whf"/>
+                            <constraint firstItem="1h6-6L-xf4" firstAttribute="bottom" secondItem="Lld-TF-6W5" secondAttribute="bottom" id="51J-py-oXW"/>
+                            <constraint firstItem="BL4-4d-Pu4" firstAttribute="leading" secondItem="juS-N8-uu4" secondAttribute="leading" id="BVa-WI-608"/>
+                            <constraint firstItem="99F-eA-OHA" firstAttribute="bottom" secondItem="5bU-Eq-JVU" secondAttribute="bottom" id="CQS-4Z-Qq1"/>
+                            <constraint firstItem="juS-N8-uu4" firstAttribute="top" secondItem="Lld-TF-6W5" secondAttribute="top" id="D0a-AI-itO"/>
+                            <constraint firstItem="BL4-4d-Pu4" firstAttribute="bottom" secondItem="juS-N8-uu4" secondAttribute="bottom" id="IFt-2f-eD3"/>
+                            <constraint firstItem="1h6-6L-xf4" firstAttribute="top" secondItem="juS-N8-uu4" secondAttribute="top" id="IjG-zO-GAI"/>
+                            <constraint firstItem="5bU-Eq-JVU" firstAttribute="leading" secondItem="99F-eA-OHA" secondAttribute="leading" id="MSz-bq-gv6"/>
+                            <constraint firstItem="1h6-6L-xf4" firstAttribute="trailing" secondItem="juS-N8-uu4" secondAttribute="trailing" id="MYy-3u-iGS"/>
+                            <constraint firstItem="BL4-4d-Pu4" firstAttribute="bottom" secondItem="Lld-TF-6W5" secondAttribute="bottom" id="PWu-2u-rr1"/>
+                            <constraint firstItem="5bU-Eq-JVU" firstAttribute="top" secondItem="Lld-TF-6W5" secondAttribute="top" constant="279" id="WAD-5F-w2M"/>
+                            <constraint firstItem="1h6-6L-xf4" firstAttribute="leading" secondItem="BL4-4d-Pu4" secondAttribute="leading" id="XgT-XO-CMJ"/>
+                            <constraint firstItem="juS-N8-uu4" firstAttribute="trailing" secondItem="BL4-4d-Pu4" secondAttribute="trailing" id="YlJ-7c-CNc"/>
+                            <constraint firstItem="qXs-wm-tOq" firstAttribute="trailing" secondItem="99F-eA-OHA" secondAttribute="trailing" id="Z2h-1w-NZL"/>
+                            <constraint firstItem="BL4-4d-Pu4" firstAttribute="top" secondItem="juS-N8-uu4" secondAttribute="top" id="aph-0n-jGg"/>
+                            <constraint firstItem="99F-eA-OHA" firstAttribute="top" secondItem="5bU-Eq-JVU" secondAttribute="top" id="dzR-FC-Lar"/>
+                            <constraint firstItem="qXs-wm-tOq" firstAttribute="trailing" secondItem="XUt-yO-3Q0" secondAttribute="trailingMargin" id="fX9-Wh-Ii9"/>
+                            <constraint firstItem="juS-N8-uu4" firstAttribute="leading" secondItem="XUt-yO-3Q0" secondAttribute="leading" id="ngG-fh-7i7"/>
+                            <constraint firstAttribute="trailing" secondItem="juS-N8-uu4" secondAttribute="trailing" id="of0-p5-AbU"/>
+                            <constraint firstItem="5bU-Eq-JVU" firstAttribute="leading" secondItem="Lld-TF-6W5" secondAttribute="leading" constant="16" id="pwb-iU-KVh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Lld-TF-6W5"/>
+                    </view>
+                    <connections>
+                        <outlet property="actionText" destination="99F-eA-OHA" id="vPV-41-cwe"/>
+                        <outlet property="cardboardButton" destination="qXs-wm-tOq" id="hcw-Ia-jXy"/>
+                        <outlet property="leftImageView" destination="lDP-6d-2GU" id="BsY-K4-idS"/>
+                        <outlet property="leftSceneView" destination="3eV-0J-RcP" id="M52-y2-fak"/>
+                        <outlet property="microphoneButton" destination="5bU-Eq-JVU" id="ybN-1X-3zP"/>
+                        <outlet property="rightImageView" destination="6gm-ta-cXG" id="wef-ht-zMf"/>
+                        <outlet property="rightSceneView" destination="xdc-dz-jBj" id="3aX-cy-16s"/>
+                        <outlet property="sceneView" destination="juS-N8-uu4" id="rBv-77-3ZF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="hK4-5e-5Tn"/>
+                <swipeGestureRecognizer direction="right" id="TZ6-vf-3Zh"/>
+            </objects>
+            <point key="canvasLocation" x="-158.77061469265368" y="132"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cardboard" width="42" height="42"/>
+        <image name="microphone_off" width="64" height="64"/>
+    </resources>
+</document>

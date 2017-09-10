@@ -1,0 +1,11 @@
+framework module YoutubeSourceParserKit {
+  umbrella header "YoutubeSourceParserKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module YoutubeSourceParserKit.Swift {
+    header "YoutubeSourceParserKit-Swift.h"
+    requires objc
+}
